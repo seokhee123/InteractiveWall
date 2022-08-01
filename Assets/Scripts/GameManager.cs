@@ -9,8 +9,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] Earth;
     public GameObject[] Things;
 
-    private void Update()
+    public GameObject Warn;
+    public bool Clickable;
+    public int cnt;
+    
+    public void WarnStart()
     {
-        
+        Warn.SetActive(true);
     }
 }
