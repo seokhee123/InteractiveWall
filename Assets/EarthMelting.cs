@@ -6,6 +6,8 @@ public class EarthMelting : MonoBehaviour
 {
     public Animator anim;
     //public bool isClick;
+    private RaycastHit2D hit;
+    public bool isEarth;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -23,14 +25,20 @@ public class EarthMelting : MonoBehaviour
             if (hit.collider != null)
             {
                 GameObject click_obj = hit.transform.gameObject;
-                anim.SetBool("isClick", true);
-                Invoke("isClickAnim", 2f);
+                if(click_obj.name == "Earth")
+                {
+                    
+                }
             }
-
         }
     }
 
-    void isClickAnim()
+    public void isClick()
+    {
+        anim.SetBool("isClick", true);
+        Invoke("isClickAnim", 2f);
+    }
+    public void isClickAnim()
     {
         anim.SetBool("isClick", false);
     }

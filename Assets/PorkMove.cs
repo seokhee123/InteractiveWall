@@ -4,26 +4,18 @@ using UnityEngine;
 
 public class PorkMove : MonoBehaviour
 {
-    public GameObject movePos;
-    bool isClick = false;
+    public GameObject movePos; 
+    private GameObject click_obj;
+
     void Update()
     {
-        //마우스 클릭시
-        if (Input.GetMouseButtonDown(0))
-        {
-            //마우스 클릭한 좌표값 가져오기
-            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //해당 좌표에 있는 오브젝트 찾기
-            RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 0f);
+  
+        this.transform.position = Vector2.MoveTowards(this.transform.position, movePos.transform.position, 3f * Time.deltaTime);
+               
+    }
 
-            if (hit.collider != null)
-            {
-                GameObject click_obj = hit.transform.gameObject;
-
-                isClick = true;
-            }
-        }
-        if(isClick == true)
-            transform.position = Vector2.MoveTowards(transform.position, movePos.transform.position, 3f * Time.deltaTime);
+    public void Click()
+    {
+        click_obj.transform.position = Vector2.MoveTowards(click_obj.transform.position, movePos.transform.position, 3f * Time.deltaTime);
     }
 }
