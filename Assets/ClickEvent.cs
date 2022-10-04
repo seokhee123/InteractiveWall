@@ -8,9 +8,15 @@ public class ClickEvent : MonoBehaviour
     public Animator anim;
     public GameObject earth;
     public GameObject[] pork;
+    public GameObject boomObj;
     void Awake()
     {
         anim = GetComponent<Animator>();
+        
+    }
+    private void Start()
+    {
+        boomObj. (false);
     }
     void Update()
     {
@@ -27,7 +33,7 @@ public class ClickEvent : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero, 0f);
 
             if (hit.collider != null)
-            {
+             {
                 click_obj = hit.transform.gameObject;
             }
         }
@@ -39,6 +45,11 @@ public class ClickEvent : MonoBehaviour
         if (GameObject.Find("Pork") == click_obj) // 지구 클릭
         {
             PorkEvent();
+        }
+
+        if (boomObj == click_obj)
+        {
+            BoomEvent();
         }
         
 
@@ -57,5 +68,15 @@ public class ClickEvent : MonoBehaviour
         
     }
 
-    
+    void BoomEvent()
+    {
+        StartCoroutine("Boom");
+    }
+
+    IEnumerator Boom()
+    {
+        boomObj.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+        boomObj.gameObject.SetActive(false);
+    }
 }
