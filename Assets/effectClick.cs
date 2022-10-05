@@ -17,16 +17,17 @@ public class effectClick : MonoBehaviour
     {
         if(Input.GetMouseButton(0) && spawnsTime >= defaultTime)
         {
-            StarCreat();
+            StarCreate();
             spawnsTime = 0;
         }
         spawnsTime += Time.deltaTime;
     }
-
-    void StarCreat()
+     
+    void StarCreate()
     {
         Vector3 mPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mPosition.z = 0;
+        Debug.Log(mPosition.ToString());
         Instantiate(starPrefab, mPosition, Quaternion.identity);
     }
 }
