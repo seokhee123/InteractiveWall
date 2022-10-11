@@ -12,5 +12,11 @@ public class Item
 public class Merge : MonoBehaviour
 {
     public List<Item> itemdata = new List<Item>();
-    //public 
+    public GameObject itemPrefabs; 
+
+    public void ItemCreate(int num)
+    {
+        GameObject go = Instantiate(itemPrefabs);
+        go.GetComponent<MergeItem>().InitItem(itemdata[num]);
+    }
 }
