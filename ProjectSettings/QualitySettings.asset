@@ -40,7 +40,8 @@ QualitySettings:
     asyncUploadBufferSize: 4
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 0}
+    customRenderPipeline: {fileID: 11400000, guid: a5e487529d28ce04e959ca173e95b38b,
+      type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Fast
@@ -76,7 +77,8 @@ QualitySettings:
     asyncUploadBufferSize: 4
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 0}
+    customRenderPipeline: {fileID: 11400000, guid: b658c674a3b9b514c8bf8c3111e79891,
+      type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Simple
@@ -112,7 +114,8 @@ QualitySettings:
     asyncUploadBufferSize: 4
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 0}
+    customRenderPipeline: {fileID: 11400000, guid: c2af3c537cb20a54d8ee7992132ce7aa,
+      type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Good
@@ -148,7 +151,8 @@ QualitySettings:
     asyncUploadBufferSize: 4
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 0}
+    customRenderPipeline: {fileID: 11400000, guid: 335960a4af6ec4c49806f5bf9997a686,
+      type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Beautiful
@@ -184,7 +188,8 @@ QualitySettings:
     asyncUploadBufferSize: 4
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 0}
+    customRenderPipeline: {fileID: 11400000, guid: 173d862feb56e4f42af97ab3f54e3177,
+      type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Fantastic
@@ -220,7 +225,8 @@ QualitySettings:
     asyncUploadBufferSize: 4
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 0}
+    customRenderPipeline: {fileID: 11400000, guid: 780dfcb5d72919a4481e177d526ff676,
+      type: 2}
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
     Android: 0
