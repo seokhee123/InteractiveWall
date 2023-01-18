@@ -5,6 +5,7 @@ using System;
 
 public class Devil : MonoBehaviour
 {
+    [SerializeField]
     public Transform Spear;
     public GameManager Manager;
     public SpriteRenderer sprRend;
